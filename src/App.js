@@ -36,19 +36,14 @@ function App() {
     <div className="app">
       <Router>
    // remove auth for test purposes
-//        {!user ? (
-//          <LoginScreen />
-//         ) : (
-//               <Routes>
-//                <Route exact path="/" element = {<HomeScreen />} />
-//                <Route path="/profile" element = {<ProfileScreen />} />
-//              </Routes>
-//        )}
-              <Routes>
-                <Route exact path="/" element = {<LoginScreen />} />
-                <Route exact path="/home" element = {<HomeScreen />} />
+        {!user ? (
+          <LoginScreen />
+         ) : (
+               <Routes>
+                <Route exact path="/" element = {<HomeScreen />} />
                 <Route path="/profile" element = {<ProfileScreen />} />
               </Routes>
+        )}
    
       </Router>
     </div>
