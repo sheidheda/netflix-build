@@ -35,14 +35,20 @@ function App() {
   return (
     <div className="app">
       <Router>
-        {!user ? (
-          <LoginScreen />
-         ) : (
-               <Routes>
-                <Route exact path="/" element = {<HomeScreen />} />
+   // remove auth for test purposes
+//        {!user ? (
+//          <LoginScreen />
+//         ) : (
+//               <Routes>
+//                <Route exact path="/" element = {<HomeScreen />} />
+//                <Route path="/profile" element = {<ProfileScreen />} />
+//              </Routes>
+//        )}
+              <Routes>
+                <Route exact path="/" element = {<LoginScreen />} />
+                <Route exact path="/home" element = {<HomeScreen />} />
                 <Route path="/profile" element = {<ProfileScreen />} />
               </Routes>
-        )}
    
       </Router>
     </div>
